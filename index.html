@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GEM Smart Tour Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- WELCOME SCREEN -->
+<section id="welcomeScreen" class="screen active">
+  <h1>Welcome to the Grand Egyptian Museum</h1>
+  <h2>مرحبًا بكم في المتحف المصري الكبير</h2>
+
+  <p>
+    This smart robot will guide you through some of the most iconic treasures of ancient Egypt.
+  </p>
+
+  <button class="primary-btn" onclick="startTour()">Start Tour</button>
+</section>
+
+<!-- MAIN TOUR SCREEN -->
+<section id="tourScreen" class="screen">
+
+  <header>
+    <h1 id="mainTitle">Grand Egyptian Museum</h1>
+    <button class="lang-btn" onclick="toggleLanguage()">AR / EN</button>
+  </header>
+
+  <!-- STATUS -->
+  <div class="status-bar">
+    <span id="statusText">You are viewing artifact 1 of 10</span>
+  </div>
+
+  <main>
+    <div class="artifact-card">
+      <div class="image-wrapper">
+        <img id="artifactImage" src="" alt="Artifact">
+        <img src="images/qr.png" class="qr-overlay" alt="QR Code">
+      </div>
+
+      <h2 id="artifactName"></h2>
+      <p id="artifactDescription"></p>
+
+      <audio id="audioPlayer" controls></audio>
+
+      <!-- Your tourism site link -->
+      <a href="https://reemhaitham12.github.io/tourism_Kemet_Website/" target="_blank" class="visit-btn">
+        Visit Our Tourism Platform
+      </a>
+    </div>
+
+    <div class="controls">
+      <button onclick="previousArtifact()">◀</button>
+      <button onclick="nextArtifact()">▶</button>
+    </div>
+  </main>
+
+</section>
+
+<!-- END SCREEN -->
+<section id="endScreen" class="screen">
+  <h1>Thank You for Touring With Us</h1>
+  <p>
+    We are a tourism platform aiming to revive the hidden beauty of Egypt away from the spotlight.
+    We believe that every village, city, and corner has a story worth telling.
+  </p>
+
+  <p>
+    Scan the QR code to continue your journey and discover Egypt differently.
+  </p>
+
+  <img src="images/qr.png" class="end-qr">
+
+  <!-- Your tourism site link -->
+  <a href="https://reemhaitham12.github.io/tourism_Kemet_Website/" target="_blank" class="primary-btn">
+    Visit Our Website
+  </a>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
